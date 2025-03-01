@@ -1,0 +1,9 @@
+# This line ignores all the .log files present in all subdirectories of the repo
+*.log
+
+/*.log
+
+# This line ignores all the files present in the /temp directory.
+temp/
+
+
