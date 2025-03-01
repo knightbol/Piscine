@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_reverse_aplhabet.c                        :+:      :+:    :+:   */
+/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rguarda- <rguarda-@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 17:48:28 by rguarda-          #+#    #+#             */
-/*   Updated: 2025/03/01 17:51:46 by rguarda-         ###   ########.fr       */
+/*   Updated: 2025/03/01 23:44:38 by rguarda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_putchar(char chr)
 {
-	write(1, &c, 1);
+	write(1, &chr, 1);
 }
 
-void	ft_print_alphabet(void)
+void	ft_print_reverse_alphabet(void)
 {
 	char	chr;
 
@@ -29,8 +29,8 @@ void	ft_print_alphabet(void)
 	}
 }
 
-/*int	main(void)
+int	main(void)
 {
-	ft_print_alphabet();
+	ft_print_reverse_alphabet();
 	return (0);
-}*/
+}
