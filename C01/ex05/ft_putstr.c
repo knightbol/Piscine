@@ -6,7 +6,7 @@
 /*   By: rodrigocaixinha <rguarda-@student.42lisbo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 14:41:22 by rodrigocaixin     #+#    #+#             */
-/*   Updated: 2025/03/02 14:42:55 by rodrigocaixin    ###   ########.fr       */
+/*   Updated: 2025/03/02 20:15:08 by rguarda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ void	ft_putstr(char *str)
 	}
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	*str;
 
 	str = "String Literal";
 	ft_putstr(str);
 	return (0);
-}
+}*/

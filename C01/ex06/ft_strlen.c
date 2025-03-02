@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rodrigocaixinha <rguarda-@student.42lisbo  +#+  +:+       +#+        */
+/*   By: rguarda- <rguarda-@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/02 13:38:24 by rodrigocaixin     #+#    #+#             */
-/*   Updated: 2025/03/02 19:52:08 by rguarda-         ###   ########.fr       */
+/*   Created: 2025/03/02 20:33:26 by rguarda-          #+#    #+#             */
+/*   Updated: 2025/03/02 20:41:19 by rguarda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+#include <unistd.h>
+
+int	ft_strlen(char *str)
 {
-	*div = a / b;
-	*mod = a % b;
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
 
 /*int	main(void)
 {
-	int	a;
-	int	b;
-	int	div;
-	int	mod;
+	char	*str = "String lenght is 21.";
 
-	a = 10;
-	b = 5;
-	ft_div_mod(a, b, &div, &mod);
+	ft_strlen(str);
 	return (0);
 }*/

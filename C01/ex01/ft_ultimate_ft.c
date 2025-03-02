@@ -6,16 +6,17 @@
 /*   By: rodrigocaixinha <rguarda-@student.42lisbo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 13:19:51 by rodrigocaixin     #+#    #+#             */
-/*   Updated: 2025/03/02 13:27:46 by rodrigocaixin    ###   ########.fr       */
+/*   Updated: 2025/03/02 19:37:02 by rguarda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <unistd.h>
 
 void	ft_ultimate_ft(int *********nbr)
 {
 	*********nbr = 42;
 }
 
-int	main(void)
+/*int	main(void)
 {
 	int	nbr;
 	int	*p1_nbr;	
@@ -37,6 +38,7 @@ int	main(void)
 	p7_nbr = &p6_nbr;
 	p8_nbr = &p7_nbr;
 	p9_nbr = &p8_nbr;
+
 	ft_ultimate_ft(p9_nbr);
 	return (0);
-}
+}*/
