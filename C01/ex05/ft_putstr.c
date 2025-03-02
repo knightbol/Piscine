@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rodrigocaixinha <rguarda-@student.42lisbo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/02 13:42:17 by rodrigocaixin     #+#    #+#             */
-/*   Updated: 2025/03/02 13:44:42 by rodrigocaixin    ###   ########.fr       */
+/*   Created: 2025/03/02 14:41:22 by rodrigocaixin     #+#    #+#             */
+/*   Updated: 2025/03/02 14:42:55 by rodrigocaixin    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_ultimate_div_mod(int *a, int *b)
-{
-	int	temp;
+#include <unistd.h>
 
-	temp = *a;
-	*a = *a / *b;
-	*b = temp % *b;
+void	ft_putstr(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		write(1, str + i, 1);
+		i++;
+	}
 }
 
-/*int	main(void)
+int	main(void)
 {
-	int	a;
-	int	b;
+	char	*str;
 
-	a = 10;
-	b = 5;
-	ft_ultimate_div_mod(&a, &b);
+	str = "String Literal";
+	ft_putstr(str);
 	return (0);
-}*/
+}
