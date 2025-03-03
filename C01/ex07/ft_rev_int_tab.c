@@ -6,7 +6,7 @@
 /*   By: rguarda- <rguarda-@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 20:50:27 by rguarda-          #+#    #+#             */
-/*   Updated: 2025/03/02 22:47:56 by rguarda-         ###   ########.fr       */
+/*   Updated: 2025/03/03 18:07:47 by rodrigocaixin    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -16,7 +16,7 @@ void print_array(int *arr, int size)
 	int	i;
 
 	i = 0;
-	while (i <= size)
+	while (i < size)
 	{
 		printf("%d", arr[i]);
 		i++;
@@ -44,7 +44,7 @@ int	main(void)
 	int	arr[] = {1, 2, 3, 4, 5};
 	int	size;
 
-	size = sizeof(arr);
+	size = sizeof(arr) / sizeof(arr[0]);
 	ft_rev_int_tab(arr, size);
 	return (0);
 }
