@@ -1,2 +1,1 @@
-#!/bin/bash
-ls -a | wc -l | sed 's/       //'
+find . -type f -o -type d | wc -l
