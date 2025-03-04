@@ -1,1 +1,1 @@
-find . -name "*.sh" -print | sed 's/.sh$//' | sed 's|^\./||'
+find . -name "*.sh" -printf "%f" | sed s/.sh$//
