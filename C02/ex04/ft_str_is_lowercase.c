@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int	ft_str_is_alpha(char *str)
+int	ft_str_is_lowercase(char *str)
 {
 	int	i;
 
@@ -14,12 +14,12 @@ int	ft_str_is_alpha(char *str)
 	return 1;
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	str1[] = "Afdfd";
 	
-	int t = ft_str_is_alpha(str1);
+	int t = ft_str_is_lowercase(str1);
 	printf("%d", t);
 	return(0);
-}
+}*/
 

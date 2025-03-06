@@ -24,7 +24,7 @@ char	*ft_strcpy(char *dest, char *src)
 	return dest;
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	str1[] = "Hey I'm about to be copied.";
 	char	str2[40];
@@ -38,4 +38,4 @@ int	main(void)
 		i++;
 	}
 	return(0);
-}
+}*/

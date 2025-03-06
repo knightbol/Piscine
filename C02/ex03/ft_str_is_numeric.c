@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int	ft_str_is_alpha(char *str)
+int	ft_str_is_numeric(char *str)
 {
 	int	i;
 
@@ -14,12 +14,12 @@ int	ft_str_is_alpha(char *str)
 	return 1;
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	str1[] = "001a0010";
 	
-	int t = ft_str_is_alpha(str1);
+	int t = ft_str_is_numeric(str1);
 	printf("%d", t);
 	return(0);
-}
+}*/
 
