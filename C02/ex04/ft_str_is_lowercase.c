@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rguarda- <rguarda-@student.42lisboa.c      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/10 17:27:09 by rguarda-          #+#    #+#             */
+/*   Updated: 2025/03/10 17:28:16 by rguarda-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 
 int	ft_str_is_lowercase(char *str)
@@ -8,10 +20,10 @@ int	ft_str_is_lowercase(char *str)
 	while (str[i] != '\0')
 	{
 		if (str[i] < 'a' || str[i] > 'z')
-			return 0;
+			return (0);
 		i++;
 	}
-	return 1;
+	return (1);
 }
 
 /*int	main(void)
@@ -22,4 +34,3 @@ int	ft_str_is_lowercase(char *str)
 	printf("%d", t);
 	return(0);
 }*/
-

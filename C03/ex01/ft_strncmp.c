@@ -6,7 +6,7 @@
 /*   By: rodrigocaixinha <rguarda-@student.42lisbo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 21:40:23 by rodrigocaixin     #+#    #+#             */
-/*   Updated: 2025/03/06 21:51:05 by rodrigocaixin    ###   ########.fr       */
+/*   Updated: 2025/03/10 22:01:19 by rguarda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
 	unsigned int	i;
 
+	if (n < 1)
+		return (0);
 	i = 0;
 	while (i < n && s1[i] != '\0' && s2[i] != '\0')
 	{
@@ -23,6 +25,8 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 			return (s1[i] - s2[i]);
 		i++;
 	}
+	if (i == n)
+		return (0);
 	return (s1[i] - s2[i]);
 }
 

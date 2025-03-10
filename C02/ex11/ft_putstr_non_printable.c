@@ -6,7 +6,7 @@
 /*   By: rodrigocaixinha <rguarda-@student.42lisbo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 01:49:37 by rodrigocaixin     #+#    #+#             */
-/*   Updated: 2025/03/05 01:49:43 by rodrigocaixin    ###   ########.fr       */
+/*   Updated: 2025/03/10 21:09:11 by rguarda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,9 @@ void	ft_putstr_non_printable(char *str)
 	}
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char *str = "Hello \n Im yo dawg.";
 	ft_putstr_non_printable(str);
 	return (0);
-}
-
+}*/

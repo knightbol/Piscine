@@ -6,7 +6,7 @@
 /*   By: rguarda- <rguarda-@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 21:53:27 by rguarda-          #+#    #+#             */
-/*   Updated: 2025/03/06 21:53:47 by rguarda-         ###   ########.fr       */
+/*   Updated: 2025/03/10 21:28:47 by rguarda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_strcmp(char *s1, char *s2)
 	return (s1[i] - s2[i]);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	int	result;
 	char	*s1 = "Hello I'm Rodrigo";
@@ -36,4 +36,4 @@ int	main(void)
 	result = ft_strcmp(s1, s2);
 	printf("strcmp: %d",result);
 	return (0);
-}
+}*/

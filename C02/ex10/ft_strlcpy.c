@@ -6,29 +6,31 @@
 /*   By: rguarda- <rguarda-@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 21:37:55 by rguarda-          #+#    #+#             */
-/*   Updated: 2025/03/04 19:46:39 by rguarda-         ###   ########.fr       */
+/*   Updated: 2025/03/10 20:40:45 by rguarda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	int	i;
-	unsigned int	size_dest;
-	
+	unsigned int	i;
+
 	i = 0;
-	while (src[i] != '\0')
+	while (i + 1 < size && src[i] != '\0')
 	{
 		dest[i] = src[i];
-		i++;	
+		i++;
 	}
-	dest[size] = '\0';
-	size_dest = sizeof(*dest) / sizeof(dest[0]);
-		
-	return size_dest;
+	if (size > 0)
+		dest[i] = '\0';
+	i = 0;
+	while (src[i])
+		i++;
+	return (i);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	str1[] = "Hey I'm about to be copied.";
 	char	str2[40];
@@ -42,4 +44,4 @@ int	main(void)
 		i++;
 	}
 	return(0);
-}
+}*/

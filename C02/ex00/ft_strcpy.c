@@ -6,22 +6,23 @@
 /*   By: rguarda- <rguarda-@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 21:37:55 by rguarda-          #+#    #+#             */
-/*   Updated: 2025/03/03 22:20:41 by rguarda-         ###   ########.fr       */
+/*   Updated: 2025/03/10 17:15:01 by rguarda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+
 char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
-	
+
 	i = 0;
 	while (src[i] != '\0')
 	{
 		dest[i] = src[i];
-		i++;	
+		i++;
 	}
-	return dest;
+	return (dest);
 }
 
 /*int	main(void)

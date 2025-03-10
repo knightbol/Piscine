@@ -6,7 +6,7 @@
 /*   By: rodrigocaixinha <rguarda-@student.42lisbo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 21:40:23 by rodrigocaixin     #+#    #+#             */
-/*   Updated: 2025/03/07 01:28:25 by rguarda-         ###   ########.fr       */
+/*   Updated: 2025/03/10 22:43:49 by rguarda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -22,10 +22,9 @@ unsigned int	ft_calc_size(char *str)
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	dest_len; // index before '\0'
-	unsigned int	src_len; // does not include '\0'
+	unsigned int	i, j;
+	unsigned int	dest_len;
+	unsigned int	src_len;
 
 
 	dest_len = ft_calc_size(dest);
@@ -45,6 +44,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	dest[j] = '\0';
 	return dest_len + src_len;
 }
+
 int	main(void)
 {
 	char	s1[30] = "Hello I'm Rodrigo.";
