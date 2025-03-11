@@ -6,33 +6,35 @@
 /*   By: rodrigocaixinha <rguarda-@student.42lisbo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 21:40:23 by rodrigocaixin     #+#    #+#             */
-/*   Updated: 2025/03/10 22:38:03 by rguarda-         ###   ########.fr       */
+/*   Updated: 2025/03/11 16:02:32 by rguarda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
 
 char	*ft_strstr(char *str, char *to_find)
 {
-    int	i, j;
+	int	i;
+	int	j;
 
-    if (*to_find == '\0')
-	return (str);
-
-    i = 0; 
-    while (str[i] != '\0' )
-    {
-	if (str[i] == to_find[0])
+	if (*to_find == '\0')
+		return (str);
+	i = 0;
+	while (str[i] != '\0' )
 	{
-	    j = 0;
-	    while (str[i + j] != '\0' && to_find[j] != '\0' && str[i + j] == to_find[j])
-		j++;
-	    if (to_find[j] == '\0')
-		return (&str[i]);
+		if (str[i] == to_find[0])
+		{
+			j = 0;
+			while (str[i + j] != '\0'
+				&& to_find[j] != '\0'
+				&& str[i + j] == to_find[j])
+				j++;
+			if (to_find[j] == '\0')
+				return (&str[i]);
+		}
+		i++;
 	}
-	i++;
-    }
-    return (0);
-} 
+	return (0);
+}
 
 /*int	main(void)
 {

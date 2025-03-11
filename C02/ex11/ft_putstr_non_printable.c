@@ -6,7 +6,7 @@
 /*   By: rodrigocaixinha <rguarda-@student.42lisbo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 01:49:37 by rodrigocaixin     #+#    #+#             */
-/*   Updated: 2025/03/10 21:09:11 by rguarda-         ###   ########.fr       */
+/*   Updated: 2025/03/11 16:19:13 by rguarda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,10 @@ void	ft_putstr_non_printable(char *str)
 	int		i;
 	int		hex_1;
 	int		hex_2;
-	char	hex_code[] = "0123456789abcdef";
+	char	*hex_code;
 
 	i = 0;
+	hex_code = "0123456789abcdef";
 	while (str[i] != '\0')
 	{
 		if (str[i] < 32 || str[i] == 127)
