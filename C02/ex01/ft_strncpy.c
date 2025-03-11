@@ -6,7 +6,7 @@
 /*   By: rguarda- <rguarda-@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 21:37:55 by rguarda-          #+#    #+#             */
-/*   Updated: 2025/03/10 19:21:03 by rguarda-         ###   ########.fr       */
+/*   Updated: 2025/03/11 14:59:16 by rguarda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,14 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	unsigned int	i;
 
 	i = 0;
-	while (i < n)
+	while (i < n && src[i] != '\0')
 	{
 		dest[i] = src[i];
+		i++;
+	}
+	while (i < n)
+	{
+		dest[i] = '\0';
 		i++;
 	}
 	return (dest);

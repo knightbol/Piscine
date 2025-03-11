@@ -6,7 +6,7 @@
 /*   By: rguarda- <rguarda-@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 19:17:11 by rguarda-          #+#    #+#             */
-/*   Updated: 2025/03/10 21:10:08 by rguarda-         ###   ########.fr       */
+/*   Updated: 2025/03/11 14:56:13 by rguarda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -14,10 +14,8 @@
 void	ft_lowcase(char *str)
 {
 	int	i;
-	int	lowc;
 
 	i = 0;
-	lowc = 0;
 	while (str[i] != '\0')
 	{
 		if (str[i] >= 'A' && str[i] <= 'Z')
@@ -29,19 +27,21 @@ void	ft_lowcase(char *str)
 char	*ft_strcapitalize(char *str)
 {
 	int	i;
-	int	lowc;
 
 	i = 0;
-	lowc = 0;
 	ft_lowcase(str);
+	if (str[0] >= 'a' && str[0] <= 'z')
+		str[0] = str[0] - 32;
 	while (str[i] != '\0')
 	{
-		if (str[0] >= 'a' && str[0] <= 'z')
-			str[0] = str[0] - 32;
-		if (
-			(str[i] == '-' || str[i] == '+' || str[i] == ' ')
-			&& (str[i + 1] >= 'a' && str[i + 1] <= 'z'))
-			str[i + 1] = str[i + 1] - 32;
+		if (((str[i] >= 32 && str[i] <= 47)
+				|| (str[i] >= 58 && str[i] <= 64)
+				|| (str[i] >= 91 && str[i] <= 96)
+				|| (str[i] >= 123 && str[i] <= 126)))
+			if (str[i + 1] != '\0'
+				&& str[i + 1] >= 'a'
+				&& str[i + 1] <= 'z')
+				str[i + 1] = str[i + 1] - 32;
 		i++;
 	}
 	return (str);
