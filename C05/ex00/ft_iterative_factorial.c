@@ -6,7 +6,7 @@
 /*   By: rguarda- <rguarda-@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 23:02:27 by rguarda-          #+#    #+#             */
-/*   Updated: 2025/03/12 14:28:10 by rguarda-         ###   ########.fr       */
+/*   Updated: 2025/03/12 16:46:57 by rguarda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 int	ft_iterative_factorial(int nb)
 {
 	int	fac;
+
 	if (nb == 0)
 		return (1);
 	if (nb < 0)

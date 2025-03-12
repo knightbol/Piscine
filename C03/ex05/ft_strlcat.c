@@ -6,7 +6,7 @@
 /*   By: rodrigocaixinha <rguarda-@student.42lisbo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 21:40:23 by rodrigocaixin     #+#    #+#             */
-/*   Updated: 2025/03/11 16:09:05 by rguarda-         ###   ########.fr       */
+/*   Updated: 2025/03/12 17:29:12 by rguarda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -29,9 +29,11 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	unsigned int	src_len;
 
 	i = 0;
-	j = dest_len;
+	src_len = 0;
 	src_len = ft_calc_size(src);
+	dest_len = 0;
 	dest_len = ft_calc_size(dest);
+	j = dest_len;
 	if (size <= dest_len)
 	{
 		return (size + src_len);
