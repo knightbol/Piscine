@@ -6,7 +6,7 @@
 /*   By: rguarda- <rguarda-@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 23:02:27 by rguarda-          #+#    #+#             */
-/*   Updated: 2025/03/12 01:30:26 by rguarda-         ###   ########.fr       */
+/*   Updated: 2025/03/12 14:33:29 by rguarda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_recursive_factorial(int nb)
 {
 	if (nb < 0)
 		return (0);
-	if (nb >= 1)
+	if (nb > 1)
 		return (nb * ft_recursive_factorial(nb - 1));
 	else
 		return (1);
