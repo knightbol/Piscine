@@ -6,7 +6,7 @@
 /*   By: rguarda- <rguarda-@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 21:08:46 by rguarda-          #+#    #+#             */
-/*   Updated: 2025/03/17 21:17:58 by rguarda-         ###   ########.fr       */
+/*   Updated: 2025/03/18 15:56:00 by rguarda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ char	*ft_strdup(char *src)
 	char	*dest;
 	char	*p_malloc;
 
+	if (!src)
+		return (NULL);
 	size = 0;
 	while (src[size])
 		size++;
-	if (size == 0)
-		return (NULL);
 	p_malloc = (char *)malloc(size + 1);
 	if (p_malloc == NULL)
 		return (NULL);

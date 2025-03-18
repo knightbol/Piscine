@@ -36,10 +36,10 @@ int	*ft_range(int min, int max)
 	i = 0;
 	if (min >= max)
 		return (NULL);
-	int *range = (int *)malloc(sizeof(int) * (diff));
+	int *range = (int *)malloc(sizeof(int) * (max - min));
 	if (range == NULL)
 		return (NULL);
-	while (i < max)
+	while (i < max - min)
 		range[i++] = min++;
 	return (range);
 }
