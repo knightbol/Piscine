@@ -1,11 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rguarda- <rguarda-@student.42lisboa.c      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/18 20:22:33 by rguarda-          #+#    #+#             */
+/*   Updated: 2025/03/18 21:24:27 by rguarda-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 #include <unistd.h>
 
 void	ft_putnbr(int n)
 {
-	char 	nbrs[12];
-	char 	digit;
-	int	i;
+	int		i;
+	char	digit;
+	char	nbrs[12];
 
 	i = 11;
 	if (n < 0)
@@ -31,12 +43,13 @@ void	ft_putnbr(int n)
 
 int	*ft_range(int min, int max)
 {
-	int 	i;
+	int	i;
+	int	*range;
 
 	i = 0;
 	if (min >= max)
 		return (NULL);
-	int *range = (int *)malloc(sizeof(int) * (max - min));
+	range = (int *)malloc(sizeof(int) * (max - min));
 	if (range == NULL)
 		return (NULL);
 	while (i < max - min)
