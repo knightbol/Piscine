@@ -6,7 +6,7 @@
 /*   By: rodrigocaixinha <rguarda-@student.42lisbo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 21:40:23 by rodrigocaixin     #+#    #+#             */
-/*   Updated: 2025/03/11 16:02:32 by rguarda-         ###   ########.fr       */
+/*   Updated: 2025/03/17 22:37:08 by rguarda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -36,10 +36,10 @@ char	*ft_strstr(char *str, char *to_find)
 	return (0);
 }
 
-/*int	main(void)
+int	main(void)
 {
-	char	s1[40] = "Hello I'm Rodrigo.";
-	char	*s2 = "Rodrigo.";
+	char	s1[40] = "Hello I'm Rodrigo aaaaaaaa.";
+	char	*s2 = "Rodrigo";
 	char	*result;
 	
 	result = ft_strstr(s1, s2);
@@ -49,4 +49,4 @@ char	*ft_strstr(char *str, char *to_find)
 	else
 	    printf("Not Found.\n");
 	return (0);
-}*/
+}
