@@ -6,7 +6,7 @@
 /*   By: rguarda- <rguarda-@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 21:24:43 by rguarda-          #+#    #+#             */
-/*   Updated: 2025/03/18 21:27:04 by rguarda-         ###   ########.fr       */
+/*   Updated: 2025/03/19 19:09:50 by rguarda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,15 @@ int	ft_ultimate_range(int **range, int min, int max)
 	size = max - min;
 	p_malloc = (int *)malloc(sizeof(int) * (size));
 	if (p_malloc == NULL)
+	{
+		*range = NULL;
 		return (-1);
+	}
 	*range = p_malloc;
 	while (i < size)
-		p_malloc[i++] = min++;
+	{
+		p_malloc[i] = min++;
+		i++;
+	}
 	return (size);
 }

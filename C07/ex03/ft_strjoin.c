@@ -6,11 +6,12 @@
 /*   By: rguarda- <rguarda-@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 21:13:27 by rguarda-          #+#    #+#             */
-/*   Updated: 2025/03/18 21:18:03 by rguarda-         ###   ########.fr       */
+/*   Updated: 2025/03/19 19:18:56 by rguarda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <stdio.h>
 
 int	ft_len(char *str)
 {
@@ -19,7 +20,7 @@ int	ft_len(char *str)
 	if (!str)
 		return (0);
 	count = 0;
-	while (*str)
+	while (*str++)
 		count++;
 	return (count);
 }
@@ -36,41 +37,49 @@ char	*ft_strcatsep(char *dest, char *src, char *sep)
 	while (*src)
 		*dest++ = *src++;
 	while (*sep)
-		*dest = *sep++;
+		*dest++ = *sep++;
+	*dest = '\0';
 	return (start);
 }
 
 char	*ft_strjoin(int size, char **strs, char *sep)
 {
-	int	i;
-	int	len;
-	int	len_sep;
+	int		i;
+	int		len;
 	char	*cat;
-	char	*p_malloc;
 
 	i = 0;
 	len = 0;
-	len_sep = 0;
-	if (!size)
+	if (!size || !strs || !sep)
 	{
-		p_malloc = (char *)malloc(1);
-		if (!p_malloc)
-			return (NULL);
-		cat = p_malloc;
+		cat = (char *)malloc(1);
+		*cat = '\0';
 		return (cat);
 	}
-	if (!strs || !sep)
-		return (NULL);
-	while (*sep++)
-		len_sep++;
 	while (i < size)
 		len += ft_len(strs[i++]);
-	len += ((size - 1) * len_sep) + 1;
-	cat = (char *)malloc(len);
+	len += (ft_len(sep) * (size - 1)) + 1;
+	cat = malloc(len);
 	if (!cat)
 		return (NULL);
+	*cat = '\0';
 	i = 0;
-	while (strs[i])
-		cat = ft_strcatsep(cat, strs[i++], sep);
-	return (cat);	
+	while (i < size)
+	{
+		if (i < size - 1)
+			cat = ft_strcatsep(cat, strs[i++], sep);
+		else
+			cat = ft_strcatsep(cat, strs[i++], "");
+	}
+	return (cat);
 }
+
+/*int	main(void)
+{
+	char	*strings[] = {"Hello", "World", "test"};
+	char	*sep = "--";
+	char	*result = ft_strjoin(3, strings, sep);
+	printf("%s\n", result);
+	free(result);
+	return (0);
+}*/
