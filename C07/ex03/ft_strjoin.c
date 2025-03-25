@@ -6,7 +6,7 @@
 /*   By: rguarda- <rguarda-@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 21:13:27 by rguarda-          #+#    #+#             */
-/*   Updated: 2025/03/19 19:18:56 by rguarda-         ###   ########.fr       */
+/*   Updated: 2025/03/25 00:20:10 by rguarda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,7 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	i = 0;
 	len = 0;
 	if (!size || !strs || !sep)
-	{
-		cat = (char *)malloc(1);
-		*cat = '\0';
-		return (cat);
-	}
+		return ((char *)malloc(1));
 	while (i < size)
 		len += ft_len(strs[i++]);
 	len += (ft_len(sep) * (size - 1)) + 1;
